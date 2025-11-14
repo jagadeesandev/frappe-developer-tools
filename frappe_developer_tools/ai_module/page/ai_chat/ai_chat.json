@@ -1,19 +1,8 @@
 {
  "creation": "2025-11-14",
- "docstatus": [],
+ "docstatus": 0,
  "doctype": "Page",
- "document_type": "Page",
- "engine": "InnoDB",
  "module": "AI Module",
  "name": "ai-chat",
- "owner": "Administrator",
- "permissions": [
-  {
-   "create": 0,
-   "delete": 0,
-   "read": 1,
-   "role": "All",
-   "write": 0
-  }
- ]
+ "owner": "Administrator"
 }
