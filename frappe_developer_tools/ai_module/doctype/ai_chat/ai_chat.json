@@ -4,24 +4,12 @@
  "autoname": "format:CHAT-{#####}",
  "creation": "2025-11-14",
  "default_view": "List",
- "docstatus": [
-  {
-   "docstatus": 0,
-   "label": "Draft"
-  },
-  {
-   "docstatus": 1,
-   "label": "Submitted"
-  },
-  {
-   "docstatus": 2,
-   "label": "Cancelled"
-  }
- ],
+ "docstatus": [],
  "doctype": "DocType",
  "document_type": "Document",
  "editable_grid": 1,
  "engine": "InnoDB",
+ "module": "AI Module",
  "fields": [
   {
    "fieldname": "user",
@@ -75,44 +63,34 @@
  "max_attachments": 0,
  "modified": "2025-11-14",
  "name": "AI Chat",
- "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
-   "amend": 0,
-   "cancel": 0,
    "create": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
-   "if_owner": 0,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "System Manager",
    "share": 1,
-   "submit": 0,
    "write": 1
   },
   {
-   "amend": 0,
-   "cancel": 0,
    "create": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
-   "if_owner": 0,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "All",
    "share": 0,
-   "submit": 0,
    "write": 1
   }
  ],
  "sort_field": "modified",
  "sort_order": "Desc",
- "states": [],
  "track_changes": 1
 }
