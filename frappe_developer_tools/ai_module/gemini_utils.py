@@ -175,3 +175,54 @@ def get_chat_history(chat_id: str) -> Dict[str, Any]:
 			"success": False,
 			"error": str(e)
 		}
+
+
+def send_message_to_gemini(message: str, chat_id: str) -> Dict[str, Any]:
+	"""
+	Send message to Gemini API
+	
+	Args:
+		message: User message
+		chat_id: Chat ID for context
+	
+	Returns:
+		Dictionary with success status and response
+	"""
+	try:
+		# Get chat history if not new
+		history = []
+		if chat_id != 'new':
+			try:
+				chat = frappe.get_doc('AI Chat', chat_id)
+				messages = frappe.db.get_list(
+					'AI Chat Message',
+					filters={'chat': chat_id},
+					fields=['role', 'content'],
+					order_by='creation asc'
+				)
+				for msg in messages:
+					history.append({
+						'role': msg['role'],
+						'content': msg['content']
+					})
+			except:
+				history = []
+		
+		# Add current message to history
+		history.append({
+			'role': 'user',
+			'content': message
+		})
+		
+		# Get response from Gemini
+		gemini_manager = GeminiAPIManager()
+		response = gemini_manager.get_chat_response(history)
+		
+		return response
+		
+	except Exception as e:
+		frappe.log_error(frappe.get_traceback(), 'Send Message to Gemini Error')
+		return {
+			'success': False,
+			'error': str(e)
+		}
