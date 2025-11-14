@@ -4,5 +4,8 @@
  "doctype": "Page",
  "module": "AI Module",
  "name": "ai-chat",
- "owner": "Administrator"
+ "owner": "Administrator",
+ "page_length": 0,
+ "standard": 1,
+ "title": "AI Chat"
 }
