@@ -66,9 +66,9 @@ web_include_js = "/assets/frappe_developer_tools/js/ai_chat.js"
 
 # Website Routes
 # ---------------
-website_route_rules = [
-	{"from_route": "/ai-chat", "to_route": "ai_chat"}
-]
+# website_route_rules = [
+# 	{"from_route": "/ai-chat", "to_route": "ai_chat"}
+# ]
 
 # Generators
 # ----------
