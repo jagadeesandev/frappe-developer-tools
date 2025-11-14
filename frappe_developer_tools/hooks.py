@@ -29,8 +29,8 @@ app_license = "mit"
 # app_include_js = "/assets/frappe_developer_tools/js/frappe_developer_tools.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/frappe_developer_tools/css/frappe_developer_tools.css"
-# web_include_js = "/assets/frappe_developer_tools/js/frappe_developer_tools.js"
+web_include_css = "/assets/frappe_developer_tools/css/ai_chat.css"
+web_include_js = "/assets/frappe_developer_tools/js/ai_chat.js"
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "frappe_developer_tools/public/scss/website"
@@ -63,6 +63,12 @@ app_license = "mit"
 # role_home_page = {
 # 	"Role": "home_page"
 # }
+
+# Website Routes
+# ---------------
+website_route_rules = [
+	{"from_route": "/ai-chat", "to_route": "ai_chat"}
+]
 
 # Generators
 # ----------
